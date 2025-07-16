@@ -22,3 +22,12 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+fetch('http://13.125.133.66:8080/')
+  .then(response => response.json())
+  .then(data => {       
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
